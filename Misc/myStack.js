@@ -29,10 +29,6 @@ class Stack {
     isFull() {
         return this.items.length === this.size;
     }
-
-    clear() {
-        this.items = [];
-    }
     print() {
         if (!this.isEmpty()) {
             var top = this.items.length - 1;
@@ -61,12 +57,13 @@ stack.remove();
 console.log("After removing, Items : ");
 stack.print()
 
+stack.add(10)
 
 console.log("First Item : " + stack.peek());
 
 console.log(stack.isEmpty());
 
-stack.clear();
+
 stack.print()
 
 
