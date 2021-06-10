@@ -33,3 +33,57 @@ function removeDupByforEach(newArray){
 
 console.log("Removing Duplicates using forEach method ....")
 console.log(removeDupByforEach(Array))
+
+// Using indexOf method  -----------> O(n^2)
+
+function removeDupByIndexOf(newArray){
+    let array = [];
+    let len = newArray.length;
+    for(let i = 0; i<len;i++){
+        if(array.indexOf(newArray[i])=== -1){
+            array.push(newArray[i])
+        }
+    }
+    return array;
+}
+
+console.log("Removing Duplicates using IndexOf method ....")
+console.log(removeDupByIndexOf(Array))
+
+
+//  Using sort and temp  -----------------> nlog(n) + n
+
+function removeDupBySort(newArray){
+    let array = [];
+    let len = newArray.length;
+    newArray.sort();
+    let temp;
+    for(let i = 0; i<len;i++){
+       if(newArray[i] !== temp){
+           array.push(newArray[i]);
+           temp = newArray[i]
+       }
+    }
+    return array;
+}
+
+console.log("Removing Duplicates using Sort method ....")
+console.log(removeDupBySort(Array))
+
+
+//  Using Onject  ----------------->  n
+
+function removeDupByObject(newArray){
+    let obj = {}
+
+    for(let i of newArray){
+        obj[i] = true;
+    }
+    let array = Object.keys(obj)
+    return array
+
+}
+
+console.log("Removing Duplicates using Object ....")
+console.log(removeDupByObject(Array))
+
