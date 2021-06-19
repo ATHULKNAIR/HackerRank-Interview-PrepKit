@@ -18,7 +18,7 @@ class Tree {
             return false;
         }
         const leftSide = this.isValidBST(node.left, min, node.data);
-        const rightSide = this.isValidBST(node.right, node.val, max);
+        const rightSide = this.isValidBST(node.right, node.data, max);
 
         return leftSide && rightSide;
     }
