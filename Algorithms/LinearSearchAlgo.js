@@ -3,8 +3,8 @@
 // at all the elements, until we find it.
 
 
-const linearSearch = (list, item) => {
-    for (const [i, element] of list.entries()) {
+const linearSearch = (array, item) => {
+    for (const [i, element] of array.entries()) {
         if (element === item) {
             return i
         }
@@ -12,3 +12,7 @@ const linearSearch = (list, item) => {
 }
 
 console.log(linearSearch([1,2,3,4,5],5))
+
+//  To calculate the Big O value we always look at the worst-case scenario.
+
+//  So the algorithm complexity is O(n).
