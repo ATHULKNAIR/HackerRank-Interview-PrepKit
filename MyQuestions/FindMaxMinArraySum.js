@@ -7,8 +7,8 @@ const array = [1,2,3,4,5];
 
 
 function findMaxMin(arr){
-    let smallNum = Math.min(...arr)
-    let largeNum = Math.max(...arr)
+    let smallNum = Math.min.apply(null,arr)  // both works
+    let largeNum = Math.max(...arr)          // different approach
 
     let arrayTotal = arr.reduce((total,i)=>total+i);
     let minSum = arrayTotal - largeNum;
