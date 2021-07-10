@@ -6,7 +6,7 @@ const array = [10,5,4,7,2,9,1,3,6]
 
 let n = array.length+1;
 let total = n * (n+1)/2;
-
+ 
 let arrayTotal = array.reduce((t,i)=> t+i);
 console.log("Missing Number : "+(total-arrayTotal))
 
