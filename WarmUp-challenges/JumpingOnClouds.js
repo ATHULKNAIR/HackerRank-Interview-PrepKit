@@ -20,3 +20,4 @@ function jumpingOnClouds(c) {
 
     return jumps;
 }
+
