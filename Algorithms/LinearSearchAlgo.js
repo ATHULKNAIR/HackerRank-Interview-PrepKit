@@ -10,7 +10,6 @@ const linearSearch = (array, item) => {
         }
     }
 }
-
 console.log(linearSearch([1,2,3,4,5],5))
 
 //  To calculate the Big O value we always look at the worst-case scenario.
