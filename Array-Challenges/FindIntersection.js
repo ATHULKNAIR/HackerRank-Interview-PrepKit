@@ -1,5 +1,5 @@
 function FindIntersection(strArr) { 
-console.log(strArr)
+
     var list = strArr.map(str=>str.split(",")) 
       
     var obj = {}
