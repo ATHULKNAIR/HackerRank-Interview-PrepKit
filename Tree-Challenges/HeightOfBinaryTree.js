@@ -33,7 +33,6 @@ a.left.left = new Node(4);
 a.left.left.left = new Node(5);
 
 const t1 =new Tree();
-t1.root = a;
 
 
-console.log(t1.findHeigth(a))
+console.log(t1.findHeigth(t1.root))
